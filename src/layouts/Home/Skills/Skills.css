@@ -1,0 +1,10 @@
+.skills-main-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap:20px  
+}
+
+.skills-main-wrapper-inner {
+    background-color: var(--primary-color-light);
+    border-radius: 8px;
+}

@@ -1,4 +1,49 @@
 #root {
   --primary-color: #8750f7;
   --primary-color-light: #f6f3fc;
+  --primary-heading-color: #2a1454;
+}
+
+@font-face {
+  font-family: 'extraDark';
+  src: url('/assets/fonts/Sora-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dark';
+  src: url('/assets/fonts/Sora-Medium.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('/assets/fonts/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Regular', sans-serif !important;
+}
+
+.section-title {
+  font-size: 35px;
+  background-image: linear-gradient(to right,
+      var(--primary-color) 0%,
+      var(--primary-heading-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 15px;
+  margin-bottom: 0;
+  font-family: 'extraDark';
+}
+
+.text1{
+  font-size: 14px;
 }

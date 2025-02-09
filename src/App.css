@@ -44,6 +44,24 @@ body {
   font-family: 'extraDark';
 }
 
-.text1{
+.text1 {
   font-size: 14px;
+}
+
+.text2 {
+  font-size: 14px;
+  font-family: Dark;
+  color: var(--primary-heading-color);
+}
+
+.PhoneInputCountry {
+  display: none !important;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: var(--primary-heading-color) !important;
+}
+
+.css-er619e-MuiFormHelperText-root {
+  margin: 0px !important;
 }

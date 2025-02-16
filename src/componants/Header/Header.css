@@ -1,0 +1,30 @@
+.navigation-comp-main-wrapper {
+    padding: 8px 0;
+    background-color: var(--primary-color-light);
+}
+
+.navigation-comp-main-wrapper .navbar-nav .nav-item a {
+    color: black;
+    font-size: 14px;
+}
+
+.navigation-comp-main-wrapper .navbar-nav .nav-item a:hover {
+    color: var(--primary-heading-color);
+    font-family: Dark;
+}
+
+.navigation-comp-main-wrapper .navbar-nav .nav-item .dropdown-item:hover {
+    color: var(--primary-heading-color);
+    background-color: var(--primary-color-light);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: var(--primary-heading-color) !important;
+    background-color: var(--primary-color-light) !important;
+}
+
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}

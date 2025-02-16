@@ -1,7 +1,11 @@
+import { navigationBar } from '@constants/index';
 import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import "./Header.css";
+import { Container } from 'react-bootstrap';
+import NavigationConst from '@baseNavigator/NavigationConst';
 function NavBarComp() {
   const [show, setShow] = useState(false);
 
@@ -10,36 +14,59 @@ function NavBarComp() {
   const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
   return (
-    <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
-      <Nav.Item>
-        <Nav.Link eventKey="1" href="#/home">
-          NavLink 1 content
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="2" title="Item">
-          NavLink 2 content
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="3" disabled>
-          NavLink 3 content
-        </Nav.Link>
-      </Nav.Item>
-      <NavDropdown
-      title="Dropdown"
-      id="nav-dropdown"
-      show={show}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-      <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-      <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
-      <NavDropdown.Divider />
-      <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
-    </NavDropdown>
-    </Nav>
+      <Navbar
+        expand="lg"
+        className="navigation-comp-main-wrapper sticky-top"
+      >
+        <Container style={{ display: "flex", justifyContent: "space-between" }}>
+          <Navbar.Brand href={NavigationConst?.home}>
+            <div className="header-logo-text">
+              Nirali
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            style={{ width: "calc(100% - 200px)" , justifyContent: "flex-end" }}
+          >
+            <Nav  onSelect={handleSelect}>
+              {
+                navigationBar.map((item) => {
+                  return (
+                    <>
+                      {item?.servicesType ?
+                        <NavDropdown
+                          title={item.mainMenu}
+                          id="nav-dropdown"
+                          // show={show}
+                          // onMouseEnter={handleMouseEnter}
+                          // onMouseLeave={handleMouseLeave}
+                        >
+                          {
+                            item.servicesType.map((subItem) => {
+                              return (
+                                <NavDropdown.Item eventKey={subItem.id}>
+                                  {subItem.name}
+                                </NavDropdown.Item>
+                              )
+                            })
+                          }
+                        </NavDropdown>
+                        :
+                        <Nav.Item key={item.id}>
+                          <Nav.Link eventKey={item.id}>
+                            {item.mainMenu}
+                          </Nav.Link>
+                        </Nav.Item>
+                      }
+                    </>
+                  )
+                }
+                )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
   );
 }
 

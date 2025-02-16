@@ -10,6 +10,7 @@ export default defineConfig({
       "@layouts": "/src/layouts",
       "@assets": "/src/assets",
       "@constants": "/src/constants",
+      "@baseNavigator": "/src/baseNavigator",
     },
   },
 })

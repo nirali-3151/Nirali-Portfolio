@@ -6,6 +6,8 @@
         "@layouts/*": ["src/layouts/*"],
         "@assets/*": ["src/assets/*"],
         "@constants/*": ["src/constants/*"],
+        "@services/*": ["src/services/*"],
+        "@baseNavigator/*": ["src/baseNavigator/*"],  
       }
     }
   }

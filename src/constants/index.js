@@ -78,13 +78,37 @@ export const CONTACT_US_CONST = [{
     text: "Phone",
     details: "+91 1234567890"
 }, {
-    key:2,
+    key: 2,
     icon: MdOutlineMailOutline,
     text: "Email",
     details: "gerolddesign@mail.com"
 }, {
-    key:3,
+    key: 3,
     icon: IoLocationOutline,
     text: "Address",
     details: "Warne Park Street Pine, FL 33157, New York"
 }]
+
+export const navigationBar = [
+    {
+        id: 1,
+        mainMenu: "Services",
+        servicesType: SERVICES_CONST
+    },
+    {
+        id: 2,
+        mainMenu: "Works",
+    },
+    {
+        id: 3,
+        mainMenu: "Resume",
+    },
+    {
+        id: 4,
+        mainMenu: "Skills",
+    },
+    {
+        id: 5,
+        mainMenu: "Contact",
+    }
+]

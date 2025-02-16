@@ -1,0 +1,16 @@
+.footer-main-wrapper {
+    padding: 60px 0;
+    background-color: var(--primary-heading-color);
+}
+
+.footer-main-wrapper-inner {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.footer-main-wrapper-inner div {
+    margin: 0 5px;
+    cursor: pointer;
+}

@@ -112,3 +112,39 @@ export const navigationBar = [
         mainMenu: "Contact",
     }
 ]
+
+export const EXPERIENCE_CONST = [
+    {
+        id: 1,
+        name: "TechnoYuga Soft Pvt. Ltd.",
+        technology: "Full Stack Developer",
+        duration: "DEC 2023 - FEB 2025"
+    },
+    {
+        id: 2,
+        name: "Flawsome Technology",
+        technology: "NodeJS Developer",
+        duration: "SEP 2021 - NOV 2023"
+    },
+    {
+        id: 3,
+        name: "Leocan Technologies LLP",
+        technology: "React Native, ReactJS Developer",
+        duration: "DEC 2021 - AUG 2023"
+    }
+]
+
+export const EDUCATION_CONST = [
+    {
+        id: 1,
+        name: "UKA TARSADIA UNIVERSITY",
+        education: "B.Tech In Computer Engineering",
+        duration: "2018 - 2022"
+    },
+    {
+        id: 2,
+        name: "P. P. SAVANI VIDHYA BHAVAN",
+        education: "P. P. SAVANI VIDHYA BHAVAN",
+        duration: "2015 - 2018"
+    },
+]   

@@ -2,6 +2,7 @@ import { SKILLS_IMAGES_CONST } from "./images";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import NavigationConst from "@baseNavigator/NavigationConst";
 
 export const SKILL_CONST = [{
     id: 1,
@@ -66,10 +67,10 @@ export const SKILL_CONST = [{
 ]
 
 export const SERVICES_CONST = [
-    { id: 1, name: "Web Development", desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
-    { id: 2, name: "Mobile Development", desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
-    { id: 3, name: "Backend Development & APIs", desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
-    { id: 4, name: "App maintainance & Code Optimization", desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
+    { id: 1, name: "Web Development", nav: NavigationConst.webDevelopment, desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
+    { id: 2, name: "Mobile Development", nav: NavigationConst.mobileDevelopment, desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
+    { id: 3, name: "Backend Development & APIs", nav: NavigationConst.backendAndApiDevelopment, desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
+    { id: 4, name: "App maintainance & Code Optimization", nav: NavigationConst.appOptimization, desc: "Conducting qualitative and quantitative research to understand user needs, behaviors, and pain points. Utilizing methods..." },
 ]
 
 export const CONTACT_US_CONST = [{
@@ -98,6 +99,7 @@ export const navigationBar = [
     {
         id: 2,
         mainMenu: "Works",
+        nav: NavigationConst?.works
     },
     {
         id: 3,
@@ -106,6 +108,7 @@ export const navigationBar = [
     {
         id: 4,
         mainMenu: "Skills",
+        servicesType: SKILL_CONST
     },
     {
         id: 5,

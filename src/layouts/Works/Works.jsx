@@ -6,8 +6,7 @@ import NavBarComp from '@componants/Header/Header'
 const Works = () => {
     return (
         <div>
-            <NavBarComp />
-            <Footer />
+        
         </div>
     )
 }

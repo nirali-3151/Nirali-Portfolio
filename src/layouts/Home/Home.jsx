@@ -7,14 +7,14 @@ import SelfIntro from './SelfIntro/SelfIntro'
 import NavBarComp from '@componants/Header/Header'
 import Footer from '@componants/Footer/Footer'
 import ExperienceEducation from './ExperienceEducation/ExperienceEducation'
-import { EXPERIENCE_CONST } from '@constants/index'
+import { EXPERIENCE_CONST, SKILL_CONST } from '@constants/index'
 const Home = () => {
   return (
     <div>
-      <NavBarComp />
       <SelfIntro />
       <Services />
-      <Skills />
+      <Skills
+        data={SKILL_CONST} />
       <ExperienceEducation
         header="Experience"
         data={EXPERIENCE_CONST}
@@ -22,7 +22,6 @@ const Home = () => {
       <div style={{ marginTop: "70px" }}>
         <ContactUs />
       </div>
-      <Footer />
     </div>
   )
 }

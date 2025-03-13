@@ -3,15 +3,18 @@ import "./Skills.css"
 import { SKILL_CONST } from '@constants/index'
 import Image from '@componants/ImageComp/Image'
 
-const Skills = () => {
+export const INP_API_URL = "https://api.interp.global/";
+export const INP_WEB_URL = "https://admin.interp.global/";
+
+const Skills = ({ title, data }) => {
   return (
     <>
       <div className='text-center'>
-        <div className='section-title'>My Skills</div>
+        <div className='section-title'>{title || "My Skills"}</div>
       </div>
       <div className='container skills-main-wrapper'>
         {
-          SKILL_CONST?.map((skill, index) => {
+          data?.map((skill, index) => {
             return (
               <div
                 key={index}

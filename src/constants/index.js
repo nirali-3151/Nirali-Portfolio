@@ -17,51 +17,65 @@ export const SKILL_CONST = [{
 {
     id: 3,
     name: "React",
+    isFrontEnd: true,
+    isWeb: true,
     icon: SKILLS_IMAGES_CONST.react
 },
 {
     id: 4,
     name: "Next",
+    isFrontEnd: true,
+    isWeb: true,
     icon: SKILLS_IMAGES_CONST.next
 },
 {
     id: 5,
     name: "React Native",
+    isFrontEnd: true,
+    isWeb: false,
     icon: SKILLS_IMAGES_CONST.reactNative
 },
 {
     id: 6,
     name: "Redux",
+    isBoth: true,
+    isFrontEnd: true,
     icon: SKILLS_IMAGES_CONST.redux
 },
 {
     id: 7,
     name: "Node",
+    isFrontEnd: false,
     icon: SKILLS_IMAGES_CONST.node
 },
 {
     id: 8,
     name: "MongoDB",
+    isDB: true,
     icon: SKILLS_IMAGES_CONST.mongoDB
 },
 {
     id: 9,
     name: "SQL",
+    isDB: true,
     icon: SKILLS_IMAGES_CONST.sql
 },
 {
     id: 10,
     name: "PSQL",
+    isDB: true,
     icon: SKILLS_IMAGES_CONST.postgresql
 },
 {
     id: 11,
     name: "GraphQL",
+    isFrontEnd: false,
     icon: SKILLS_IMAGES_CONST.graphql
 },
 {
     id: 12,
     name: "Firebase",
+    isFrontEnd: false,
     icon: SKILLS_IMAGES_CONST.firebase
 }
 ]
@@ -150,4 +164,16 @@ export const EDUCATION_CONST = [
         education: "P. P. SAVANI VIDHYA BHAVAN",
         duration: "2015 - 2018"
     },
-]   
+]
+
+export const projects = [{
+    id: 1,
+    name: "TalkSync",
+    summary: "",
+    image: "",
+    technology: [3, 6, 7, 8],
+    problems: "",
+    imagesForSlider: "",
+    challenges: "",
+    learnings: ""
+}]

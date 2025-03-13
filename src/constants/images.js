@@ -13,4 +13,8 @@ export const SKILLS_IMAGES_CONST = {
     firebase: "/assets/images/skills/firebase.svg",
 }
 
+export const SERVICES_IMAGES_CONST = {
+    webDevelopment: "/assets/images/services/web-development.webp",
+}
+
 // Function to check if a number is primw

@@ -11,12 +11,10 @@ function NavBarComp() {
   const [show, setShow] = useState(false);
   const navi = useNavigate()
 
-  const handleMouseEnter = () => setShow(true);
+  const handleMouseEnter = (data) => setShow(data);
   const handleMouseLeave = () => setShow(false);
 
   const onClickNavigate = async (nav) => {
-    console.log("nav ===============",nav);
-    
     navi(nav)
   }
 
@@ -46,9 +44,9 @@ function NavBarComp() {
                       <NavDropdown
                         title={item.mainMenu}
                         id="nav-dropdown"
-                      // show={show}
-                      // onMouseEnter={handleMouseEnter}
-                      // onMouseLeave={handleMouseLeave}
+                        show={item.mainMenu === show}
+                        onMouseEnter={() => handleMouseEnter(item.mainMenu)}
+                        onMouseLeave={handleMouseLeave}
                       >
                         {
                           item.servicesType.map((subItem) => {

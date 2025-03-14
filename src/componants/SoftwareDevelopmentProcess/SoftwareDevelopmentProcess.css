@@ -1,35 +1,41 @@
 .software-development-container {
   display: flex;
   justify-content: center;
-  align-items: center;
   max-width: 6400px;
   margin: 0 auto;
-  padding: 2rem;
+  overflow: hidden;
+  position: relative;
 }
 
 .svg-container {
   position: relative;
   width: calc(80%);
   height: 100%;
-  margin-top: -950px;
+  margin-top: -450px;
+  overflow: hidden;
+  clip-path: inset(450px 0 0 0); /* This will hide content above the container */
+}
+
+/* Container wrapper to ensure proper clipping */
+.container {
+  overflow: hidden;
+  position: relative;
 }
 
 .circle-element {
-  fill: #f0f8ff;
-  stroke: #d0e0f0;
-  stroke-width: 8;
+  fill: var(--primary-color-light);
+  stroke: #fff;
+  stroke-width: 20;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .hovered-circle {
-  fill: #e0f0ff;
-  stroke: #b0d0f0;
+  fill: #ede5fd;
 }
 
 .selected-circle {
-  fill: #c0e0ff;
-  stroke: #4080c0;
+  fill: #e5d8fe;
   stroke-width: 10;
 }
 
@@ -42,14 +48,14 @@
 .circle-label {
   font-size: 96px;
   font-weight: bold;
-  fill: #2060a0;
+  fill: var(--primary-heading-color);
   transition: all 0.3s ease;
   pointer-events: none;
 }
 
 .circle-description {
   font-size: 16px;
-  fill: #666;
+  fill: var(--primary-heading-color);
   transition: all 0.3s ease;
 }
 
@@ -59,12 +65,12 @@
 }
 
 .selected-text .circle-label {
-  fill: #104080;
+  fill: var(--primary-color);
   font-weight: bold;
 }
 
 .selected-text .circle-description {
-  fill: #444;
+  fill: var(--primary-heading-color);
 }
 
 /* Center label styling */
@@ -75,12 +81,12 @@
 .center-title {
   font-size: 36px;
   font-weight: bold;
-  fill: #104080;
+  fill: var(--primary-heading-color);
 }
 
 .center-description {
   font-size: 20px;
-  fill: #4080c0;
+  fill: var(--primary-color);
 }
 
 /* Accordion styling */
@@ -89,8 +95,10 @@
   z-index: 1;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 24px;
-  padding: 3rem;
+  padding: 1.5rem;
+  height: fit-content;
   margin-left: -420px;
+  margin-top: 100px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
@@ -99,8 +107,8 @@
 }
 
 .accordion-item {
-  margin-bottom: 2.5rem;
-  border-radius: 20px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -113,30 +121,30 @@
 .accordion-header {
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 8px 16px;
   cursor: pointer;
-  background-color: #f0f8ff;
+  background-color: var(--primary-color-light);
 }
 
 .accordion-item.active .accordion-header {
-  background-color: #d0e8ff;
+  background-color: #ede5fd;
 }
 
 .accordion-icon {
-  font-size: 40px;
-  margin-right: 2rem;
+  font-size: 24px;
+  margin-right: 1rem;
 }
 
 .accordion-header h3 {
   flex-grow: 1;
   margin: 0;
-  font-size: 2rem;
-  color: #2060a0;
+  font-size: 1.2rem;
+  color: var(--primary-heading-color);
 }
 
 .accordion-toggle {
-  font-size: 2.2rem;
-  color: #4080c0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -144,24 +152,24 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .accordion-item.active .accordion-content {
   max-height: 500px;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .accordion-description {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #444;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-heading-color);
 }
 
 .accordion-details {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--primary-heading-color);
 }
 
 /* Responsive adjustments */

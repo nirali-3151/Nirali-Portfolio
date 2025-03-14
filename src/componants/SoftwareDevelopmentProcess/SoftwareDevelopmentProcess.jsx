@@ -9,6 +9,7 @@ const SoftwareDevelopmentProcess = () => {
     {
       id: 0,
       r: 1000,
+      icon: "📋",
       label: "Planning",
       description: "Requirements gathering and analysis",
       details:
@@ -17,6 +18,7 @@ const SoftwareDevelopmentProcess = () => {
     {
       id: 1,
       r: 1680,
+      icon: "🎨",
       label: "Design",
       description: "Architecture and UI/UX design",
       details:
@@ -25,6 +27,7 @@ const SoftwareDevelopmentProcess = () => {
     {
       id: 2,
       r: 2400,
+      icon: "💻",
       label: "Development",
       description: "Coding and implementation",
       details:
@@ -33,6 +36,7 @@ const SoftwareDevelopmentProcess = () => {
     {
       id: 3,
       r: 3100,
+      icon: "🧪",
       label: "Testing",
       description: "Quality assurance and validation",
       details:
@@ -54,13 +58,16 @@ const SoftwareDevelopmentProcess = () => {
 
   // Calculate positions for text labels - now at the bottom of each circle
   const getTextPosition = (circle) => {
-    return { x: 3200, y: 3200 + circle.r - 250 };
+    return { x: 3200, y: 3200 + circle.r - 310 };
   };
 
   return (
     <div
       style={{
-        margin: "60px 0", background:"#f9f9f9" ,paddingBottom:"40px"
+        margin: "60px 0",
+        background: "#f9f9f9",
+        paddingBottom: "40px",
+        paddingTop: "20px",
       }}
     >
       <div className="container">
@@ -72,27 +79,55 @@ const SoftwareDevelopmentProcess = () => {
             <svg viewBox="0 0 6400 6400" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 {/* Fill gradients */}
-                <linearGradient id="circleGradient" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                <linearGradient
+                  id="circleGradient"
+                  gradientUnits="userSpaceOnUse"
+                  x1="3200"
+                  y1="6400"
+                  x2="3200"
+                  y2="0"
+                >
                   <stop offset="0%" stopColor="#f5f2ff" />
                   <stop offset="60%" stopColor="rgb(249, 249, 249)" />
                   <stop offset="100%" stopColor="rgb(249, 249, 249)" />
                 </linearGradient>
 
-                <linearGradient id="circleGradientHover" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                <linearGradient
+                  id="circleGradientHover"
+                  gradientUnits="userSpaceOnUse"
+                  x1="3200"
+                  y1="6400"
+                  x2="3200"
+                  y2="0"
+                >
                   <stop offset="0%" stopColor="#e5ddff" />
                   <stop offset="55%" stopColor="rgb(249, 249, 249)" />
                   <stop offset="100%" stopColor="rgb(249, 249, 249)" />
                 </linearGradient>
 
-                <linearGradient id="circleGradientSelected" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                <linearGradient
+                  id="circleGradientSelected"
+                  gradientUnits="userSpaceOnUse"
+                  x1="3200"
+                  y1="6400"
+                  x2="3200"
+                  y2="0"
+                >
                   <stop offset="0%" stopColor="#d9ccff" />
-                  <stop offset="34%" stopColor="#f4f0fb" />
+                  <stop offset="44%" stopColor="#f4f0fb" />
                   <stop offset="60%" stopColor="rgb(249, 249, 249)" />
                   <stop offset="100%" stopColor="rgb(249, 249, 249)" />
                 </linearGradient>
 
                 {/* Stroke gradients */}
-                <linearGradient id="strokeGradient" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                <linearGradient
+                  id="strokeGradient"
+                  gradientUnits="userSpaceOnUse"
+                  x1="3200"
+                  y1="6400"
+                  x2="3200"
+                  y2="0"
+                >
                   <stop offset="0%" stopColor="#ffffff" />
                   <stop offset="60%" stopColor="rgb(249, 249, 249)" />
                   <stop offset="100%" stopColor="rgb(249, 249, 249)" />
@@ -135,7 +170,7 @@ const SoftwareDevelopmentProcess = () => {
                       textAnchor="middle"
                       className="circle-label"
                     >
-                      {circle.label}
+                      {circle.icon} &nbsp;&nbsp;{circle.label}
                     </text>
                   </g>
                 );
@@ -155,12 +190,7 @@ const SoftwareDevelopmentProcess = () => {
                   onClick={() => handleCircleClick(item.id)}
                 >
                   <div className="accordion-header">
-                    <div className="accordion-icon">
-                      {item.id === 0 && "📋"}
-                      {item.id === 1 && "🎨"}
-                      {item.id === 2 && "💻"}
-                      {item.id === 3 && "🧪"}
-                    </div>
+                    <div className="accordion-icon">{item.icon}</div>
                     <h3>{item.label}</h3>
                     <div className="accordion-toggle">
                       {selectedCircle === item.id ? "−" : "+"}

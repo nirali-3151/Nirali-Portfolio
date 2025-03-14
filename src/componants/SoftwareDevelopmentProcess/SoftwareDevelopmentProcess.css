@@ -13,7 +13,9 @@
   height: 100%;
   margin-top: -450px;
   overflow: hidden;
-  clip-path: inset(450px 0 0 0); /* This will hide content above the container */
+  clip-path: inset(
+    450px 0 0 0
+  );
 }
 
 /* Container wrapper to ensure proper clipping */
@@ -23,19 +25,21 @@
 }
 
 .circle-element {
-  fill: var(--primary-color-light);
-  stroke: #fff;
-  stroke-width: 20;
+  fill: url('#circleGradient');
+  stroke: url('#strokeGradient');
+  stroke-width: 25;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .hovered-circle {
-  fill: #ede5fd;
+  fill: url('#circleGradientHover');
+  stroke: url('#strokeGradient');
 }
 
 .selected-circle {
-  fill: #e5d8fe;
+  fill: url('#circleGradientSelected');
+  stroke: url('#strokeGradient');
   stroke-width: 10;
 }
 
@@ -98,8 +102,8 @@
   padding: 1.5rem;
   height: fit-content;
   margin-left: -420px;
+  border: 1px solid #e5e5e5;
   margin-top: 100px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .accordion {
@@ -177,47 +181,47 @@
   .software-development-container {
     flex-direction: column;
   }
-  
+
   .svg-container {
     width: 100%;
   }
-  
+
   .accordion-container {
     width: 100%;
     margin-left: 0;
     margin-top: 2rem;
     padding: 2rem;
   }
-  
+
   .circle-label {
     font-size: 40px;
   }
-  
+
   .circle-description {
     font-size: 14px;
   }
-  
+
   .circle-icon {
     font-size: 28px;
   }
-  
+
   .center-title {
     font-size: 28px;
   }
-  
+
   .center-description {
     font-size: 16px;
   }
-  
+
   .accordion-header h3 {
     font-size: 1.5rem;
   }
-  
+
   .accordion-description {
     font-size: 1.2rem;
   }
-  
+
   .accordion-details {
     font-size: 1.1rem;
   }
-} 
+}

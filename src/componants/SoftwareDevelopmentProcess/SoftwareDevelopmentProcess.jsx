@@ -32,7 +32,7 @@ const SoftwareDevelopmentProcess = () => {
     },
     {
       id: 3,
-      r: 3020,
+      r: 3100,
       label: "Testing",
       description: "Quality assurance and validation",
       details:
@@ -70,6 +70,34 @@ const SoftwareDevelopmentProcess = () => {
         <div className="d-flex software-development-container">
           <div className="svg-container">
             <svg viewBox="0 0 6400 6400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                {/* Fill gradients */}
+                <linearGradient id="circleGradient" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                  <stop offset="0%" stopColor="#f5f2ff" />
+                  <stop offset="60%" stopColor="rgb(249, 249, 249)" />
+                  <stop offset="100%" stopColor="rgb(249, 249, 249)" />
+                </linearGradient>
+
+                <linearGradient id="circleGradientHover" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                  <stop offset="0%" stopColor="#e5ddff" />
+                  <stop offset="55%" stopColor="rgb(249, 249, 249)" />
+                  <stop offset="100%" stopColor="rgb(249, 249, 249)" />
+                </linearGradient>
+
+                <linearGradient id="circleGradientSelected" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                  <stop offset="0%" stopColor="#d9ccff" />
+                  <stop offset="34%" stopColor="#f4f0fb" />
+                  <stop offset="60%" stopColor="rgb(249, 249, 249)" />
+                  <stop offset="100%" stopColor="rgb(249, 249, 249)" />
+                </linearGradient>
+
+                {/* Stroke gradients */}
+                <linearGradient id="strokeGradient" gradientUnits="userSpaceOnUse" x1="3200" y1="6400" x2="3200" y2="0">
+                  <stop offset="0%" stopColor="#ffffff" />
+                  <stop offset="60%" stopColor="rgb(249, 249, 249)" />
+                  <stop offset="100%" stopColor="rgb(249, 249, 249)" />
+                </linearGradient>
+              </defs>
               {/* Render circles */}
               {[...circleData].reverse().map((circle) => (
                 <circle
